@@ -1,0 +1,13 @@
+PyPDF2
+pypdf
+pdfminer.six
+Pillow
+langchain
+torch
+transformers
+sentence-transformers
+datasets
+faiss-cpu
+tensorflow
+langchain-community
+fpdf
