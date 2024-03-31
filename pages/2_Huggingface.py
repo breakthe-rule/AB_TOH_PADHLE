@@ -22,7 +22,7 @@ if "chat_history" not in st.session_state:
     st.session_state.llm_history = 0
     st.session_state.chat_history = []
 
-directory = '\AB_TOH_PADHLE\Material'
+directory = 'Material'
 pdf_files = glob.glob(os.path.join(directory, '*.pdf'))
 options = []
 for pdf_file in pdf_files:
@@ -71,7 +71,7 @@ user_message = st.chat_input("You:")
 
 if user_message:
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2',model_kwargs={'device': 'cpu'})
-    db = FAISS.load_local(f"/AB_TOH_PADHLE/vectordb/required_{selected_pdf}_vectordb", embeddings, allow_dangerous_deserialization=True)
+    db = FAISS.load_local(f"vectordb/required_{selected_pdf}_vectordb", embeddings, allow_dangerous_deserialization=True)
     retriever = db.as_retriever()
     docs = retriever.invoke(user_message)
     context = ""; count = 0

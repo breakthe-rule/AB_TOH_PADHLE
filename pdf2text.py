@@ -27,7 +27,7 @@ def text_extraction(element):
 
 #Final
 def required_txt(pdf_path):
-    file_path = f"\AB_TOH_PADHLE\Material\{pdf_path}"
+    file_path = f"Material\{pdf_path}"
     # create a PDF file object
     pdfFileObj = open(file_path, 'rb')
     # create a PDF reader object
@@ -91,7 +91,7 @@ def required_txt(pdf_path):
             pdf.write(5, chunk.encode('latin-1', 'replace').decode('latin-1'))
 
     # Save the PDF with the same name as the text file
-    pdf_output_path = f'{out_file_path.split(".")[0]}.pdf'
+    pdf_output_path = f'dummy/{out_file_path.split(".")[0]}.pdf'
     pdf.output(pdf_output_path)
     print(f"Result saved to {pdf_output_path}")
     os.remove(out_file_path)

@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 import os
 
 def create_vectordb(file_name):
-    loader = DirectoryLoader("\AB_TOH_PADHLE", glob=file_name,loader_cls=PyPDFLoader)
+    loader = DirectoryLoader("dummy", glob=file_name,loader_cls=PyPDFLoader)
     documents = loader.load()
     for i in range(len(documents)):
         dummy = documents[i].page_content
@@ -22,8 +22,9 @@ def create_vectordb(file_name):
     print("Creating db....`")
     db = FAISS.from_documents(texts, embeddings)
     print("saving...")
-    db.save_local(f"/AB_TOH_PADHLE/vectordb/{file_name[:-4]}_vectordb")
-    os.remove(file_name)
+    db.save_local(f"vectordb/{file_name[:-4]}_vectordb")
+    repath = f"dummy/{file_name}"
+    os.remove(repath)
     print("Removed",file_name)
 
 # Example usage

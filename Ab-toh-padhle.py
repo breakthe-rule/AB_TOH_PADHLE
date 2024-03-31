@@ -24,7 +24,7 @@ st.write("# :white[Ab Toh Padhle 🤖]")
 st.divider()
 
 # Select textbook
-directory = '\AB_TOH_PADHLE\Material'
+directory = 'Material'
 pdf_files = glob.glob(os.path.join(directory, '*.pdf'))
 options = []
 for pdf_file in pdf_files:
@@ -56,7 +56,7 @@ user_message = st.chat_input("You:", key="user_message")
 if user_message:
     # Retrival
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2',model_kwargs={'device': 'cpu'})
-    db = FAISS.load_local(f"/AB_TOH_PADHLE/vectordb/required_{selected_pdf}_vectordb", embeddings, allow_dangerous_deserialization=True)
+    db = FAISS.load_local(f"vectordb/required_{selected_pdf}_vectordb", embeddings, allow_dangerous_deserialization=True)
     retriever = db.as_retriever()
     docs = retriever.invoke(user_message)
     context = ""; count = 0
