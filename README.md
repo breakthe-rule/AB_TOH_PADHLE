@@ -12,12 +12,15 @@ This project is a chatbot designed to assist students in interacting with their 
 * *Select LLM of your own.*
 * *Runs on both local machine and via internet.*
 
+A detailed list of resources used in this project can be found in the `Resources.pdf` 
+
 ## UI
 ![Home Screen](https://github.com/breakthe-rule/AB_TOH_PADHLE/assets/114070578/35a3071e-568a-4529-873e-e13f9141997b)
 ![Huggingface](https://github.com/breakthe-rule/AB_TOH_PADHLE/assets/114070578/f13f2583-8890-4d59-8723-3046d86f1a01)
 ![Chat_history](https://github.com/breakthe-rule/AB_TOH_PADHLE/assets/114070578/1b478f2a-b2b7-4ce5-9d94-aae6b36537db)
 
 ## Workflow
+![Flowchart](https://github.com/breakthe-rule/AB_TOH_PADHLE/assets/114070578/bdf8d899-0e98-46a3-9f06-98cf02a3cb05)
 
 ## Setup
 
