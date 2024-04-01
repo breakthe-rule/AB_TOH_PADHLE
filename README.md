@@ -37,6 +37,6 @@ A detailed list of resources used in this project can be found in the `Resources
 
 
 ## Contact
-I am open for any kind of suggetions/help regarding this project/domain. Feel free to reach me at [Mail](tanayfalor@gamil.com) and [Linkedin](https://www.linkedin.com/in/tanay-falor-a94802253/)
+I am open for any kind of suggetions/help regarding this project/domain. Feel free to reach me at tanayfalor@gamil.com and [Linkedin](https://www.linkedin.com/in/tanay-falor-a94802253/)
 
 
